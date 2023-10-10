@@ -6,3 +6,9 @@ def index(request):
 
 def about(request):
     return HttpResponse("This is about page.")
+
+def contact(request):
+    return HttpResponse("This is contact page.")
+
+def service(request):
+    return HttpResponse("This is service page.")
