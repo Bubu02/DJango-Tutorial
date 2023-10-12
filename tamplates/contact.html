@@ -2,4 +2,17 @@
 
 {% block title %} Contact {%endblock title%}
 
-{%block body %} This is my contact page. {% endblock body%}
+{%block body %}
+<form method="post" action="/contact">
+{%csrf_token%}
+    <div class=" container-fluid">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+  <div class=" conmb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Issue</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="col-auto my-1 text-center">
+    <button type="submit" class="btn btn-primary mb-3">Submit</button>
+  </div>
+{% endblock body%}
